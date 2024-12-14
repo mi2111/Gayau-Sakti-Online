@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Penduduk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgb(179, 211, 218);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+        th {
+            text-align: left;
+            font-weight: bold;
+        }
+        td input[type="text"],
+        td input[type="date"],
+        td input[type="email"],
+        td input[type="submit"],
+        td input[type="radio"],
+        td select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        td input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        td input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tambah Data</h1>
+<form action="proses_tambah_data_penduduk.php" method="post" enctype="multipart/form-data">
+    <h2>Data Penduduk</h2>
+    <table>
+        <tr>
+            <th>id</th>
+            <td><input type="text" name="id" placeholder="Masukkan id Anda" required></td>
+        </tr>
+        <tr>
+            <th>NIK</th>
+            <td><input type="text" name="nik" placeholder="Masukkan NIK Anda"></td>
+        </tr>
+        <tr>
+            <th>Nama</th>
+            <td><input type="text" name="nama" placeholder="Masukkan Nama Anda"></td>
+        </tr>
+        <tr>
+            <th>Jenis Kelamin</th>
+            <td>
+                <input type="radio" name="jenis_kelamin" value="L"> Laki-laki
+                <input type="radio" name="jenis_kelamin" value="P"> Perempuan
+            </td>
+        </tr>
+        <tr>
+            <th>Tempat Tanggal Lahir</th>
+            <td><input type="text" name="tempat_tanggal_lahir" pattern="[A-Za-z ]+" placeholder="Masukkan Tempat Tanggal Lahir Anda"></td>
+        </tr>
+        <tr>
+            <th>Tanggal Lahir</th>
+            <td><input type="date" name="tanggal_lahir" placeholder="Masukkan Tanggal Lahir Anda"></td>
+        </tr>
+        <tr>
+            <th>Alamat</th>
+            <td><input type="text" name="alamat" placeholder="Masukkan Alamat Anda"></td>
+        </tr>
+        <tr>
+            <th>Nomor Telepon</th>
+            <td><input type="text" name="nomor_telepon" placeholder="Masukkan Nomor Telepon Anda"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" name="email" placeholder="Masukkan email Anda"></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>
+                <input type="radio" name="status" value="Kawin"> Kawin
+                <input type="radio" name="status" value="Belum"> Belum Kawin
+                <input type="radio" name="status" value="Cerai Hidup"> Cerai Hidup
+                <input type="radio" name="status" value="Cerai Mati"> Cerai Mati
+            </td>
+        </tr>
+        <tr>
+            <th>Kewarganegaraan</th>
+            <td><input type="text" name="kewarganegaraan" placeholder="Masukkan Kewarganegaraan Anda" required></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="Simpan"></td>
+        </tr>
+    </table>
+</form>
+</form>
+</body>
+</html>
